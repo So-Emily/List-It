@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS listIt_db;
+CREATE DATABASE listIt_db;
