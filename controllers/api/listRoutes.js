@@ -1,15 +1,6 @@
 const router = require('express').Router();
 const { List } = require('../../models');
 
-// GET all lists
-router.get('/', async (req, res) => {
-    try {
-        const listData = await List.findAll();
-        res.status(200).json(listData);
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
 
 // POST a new list
 router.post('/', async (req, res) => {
