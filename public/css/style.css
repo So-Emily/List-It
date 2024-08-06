@@ -1,0 +1,36 @@
+/* Reset some default browser style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #c2c2c2;
+    color: black;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container for the log forms */
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for form elements */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
