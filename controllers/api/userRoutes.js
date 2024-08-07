@@ -1,6 +1,6 @@
 // controllers/userRoutes.js
 const router = require('express').Router();
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const session = require('express-session');
 const { User } = require('../../models');
 const _ = require('lodash');
