@@ -1,6 +1,10 @@
 {{!-- views/homepage.handlebars --}}
+{{!-- This is the handlebars template file for the homepage view --}}
+
 {{!-- Extend the main layout --}}
 {{#extend 'main'}}
+{{!-- This extends the main layout template to include the content of this file --}}
+
 {{!-- Define the content for the body --}}
 {{#content 'body'}}
 <div class="container text-center">
@@ -22,7 +26,7 @@
             {{/each}}
         </div>
         <div class="mt-4">
-            <button id="add-list-btn" class="btn btn-dark " data-bs-toggle="modal" data-bs-target="#addListModal">Add New List</button>
+            <button id="add-list-btn" class="btn btn-dark justify-content-center" data-bs-toggle="modal" data-bs-target="#addListModal">Add New List</button>
         </div>
     {{else}}
         <h1>Please log in to view your lists</h1>
@@ -37,23 +41,30 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <!-- Modal Title -->
                 <h5 class="modal-title" id="addListModalLabel">Add New List</h5>
+                <!-- Close Button -->
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <!-- Form for Adding a New List -->
                 <form id="add-list-form">
                     <div class="mb-3">
+                        <!-- Input for List Title -->
                         <label for="listTitle" class="form-label">Title</label>
                         <input type="text" class="form-control" id="listTitle" required>
                     </div>
                     <div class="mb-3">
+                        <!-- Textarea for List Description -->
                         <label for="listDescription" class="form-label">Description</label>
                         <textarea class="form-control" id="listDescription" rows="3" required></textarea>
                     </div>
                     <div class="mb-3">
+                        <!-- Input for List Image URL -->
                         <label for="listImageUrl" class="form-label">Image URL</label>
                         <input type="url" class="form-control" id="listImageUrl" required>
                     </div>
+                    <!-- Submit Button for the Form -->
                     <button type="submit" class="btn btn-primary">Add List</button>
                 </form>
             </div>
