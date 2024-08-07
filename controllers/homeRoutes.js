@@ -5,6 +5,7 @@ const session = require('express-session');
 const checkAuthentication = require('../middlewares/middlewares');
 
 router.get('/', async (req, res) => {
+    
     try {
         res.render('login', {login:req.session.login})
     } catch (err) {
