@@ -1,13 +1,76 @@
 {{!-- views/homepage.handlebars --}}
+{{!-- This is the handlebars template file for the homepage view --}}
+
 {{!-- Extend the main layout --}}
 {{#extend 'main'}}
+{{!-- This extends the main layout template to include the content of this file --}}
 
 {{!-- Define the content for the body --}}
 {{#content 'body'}}
-<div class="container">
-    <h1>Hello! Let's Just List-It</h1>
-    <p>Track all your nerdy hobbies in one place.</p>
+<div class="container text-center">
+    {{#if user}}
+        <h1>Welcome to your Lists!</h1>
+        
+        <div id="list-card-container" class="row justify-content-center"></div>
+            {{#each lists}}
+            <div class="col-md-4">
+                <div class="card mb-4" style="width: 18rem;">
+                    <img src="{{this.imageUrl}}" class="card-img-top" alt="{{this.title}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.title}}</h5>
+                        <p class="card-text">{{this.description}}</p>
+                        <a href="/lists/{{this.id}}" class="btn btn-primary">View List</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="mt-4">
+            <button id="add-list-btn" class="btn btn-dark justify-content-center" data-bs-toggle="modal" data-bs-target="#addListModal">Add New List</button>
+        </div>
+    {{else}}
+        <h1>Please log in to view your lists</h1>
+        <a href="/login" class="btn btn-primary">Log In</a>
+        <a href="/signup" class="btn btn-secondary">Sign Up</a>
+    {{/if}}
 </div>
-{{/content}}
 
+{{#if user}}
+<!-- Add List Modal -->
+<div class="modal fade" id="addListModal" tabindex="-1" aria-labelledby="addListModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- Modal Title -->
+                <h5 class="modal-title" id="addListModalLabel">Add New List</h5>
+                <!-- Close Button -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form for Adding a New List -->
+                <form id="add-list-form">
+                    <div class="mb-3">
+                        <!-- Input for List Title -->
+                        <label for="listTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="listTitle" required>
+                    </div>
+                    <div class="mb-3">
+                        <!-- Textarea for List Description -->
+                        <label for="listDescription" class="form-label">Description</label>
+                        <textarea class="form-control" id="listDescription" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <!-- Input for List Image URL -->
+                        <label for="listImageUrl" class="form-label">Image URL</label>
+                        <input type="url" class="form-control" id="listImageUrl" required>
+                    </div>
+                    <!-- Submit Button for the Form -->
+                    <button type="submit" class="btn btn-primary">Add List</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
+{{/content}}
 {{/extend}}
