@@ -1,7 +1,6 @@
 // controllers/userRoutes.js
 const router = require('express').Router();
-const bcrypt = require('bcryptjs');
-const session = require('express-session');
+// const bcrypt = require('bcryptjs');
 const { User } = require('../../models');
 const _ = require('lodash');
 
@@ -29,18 +28,18 @@ router.post('/register', async (req, res) => {
 // Login route 
 router.post('/login', async (req, res) => {
   try {
-    const userLoggin = await User.findOne({ where: { email: req.body.email } }, {raw:true});
+    const userLogin = await User.findOne({ where: { email: req.body.email } }, {raw:true});
 
-    if (!userLoggin) {
+    if (!userLogin) {
       return res.status(404).send('Username or password incorrect');
     }
 
-    const passwordValid = await userLoggin.checkPassword(req.body.password);
+    const passwordValid = await userLogin.checkPassword(req.body.password);
     if (!passwordValid) {
       return res.status(401).send('Username or password incorrect');
     }
   req.session.save(() => {
-    const userInfo = _.omit(userLoggin, ['password']);
+    const userInfo = _.omit(userLogin, ['password']);
     req.session.user_id = userInfo.id;
     req.session.logged_in = true;
     res.status(200).json(userInfo);

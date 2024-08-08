@@ -5,7 +5,7 @@ document.querySelector('#register-form').addEventListener('submit', async (event
     const password = document.querySelector('input[name="password"]').value.trim();
 
     if (name && email && password) {
-        const response = await fetch('/users/register',{
+        const response = await fetch('/api/users/register',{
             method: 'POST',
             body: JSON.stringify({ name, email, password}),
             headers: { 'Content-Type': 'application/json' },

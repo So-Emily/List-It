@@ -1,2 +1,3 @@
-DROP DATABASE IF EXISTS listIt_db;
-CREATE DATABASE listIt_db;
+DROP DATABASE IF EXISTS listit_db;
+CREATE DATABASE listit_db;
+\c listit_db;
