@@ -1,16 +1,10 @@
 {{!-- views/homepage.handlebars --}}
 {{!-- This is the handlebars template file for the homepage view --}}
 
-{{!-- Extend the main layout --}}
-{{#extend 'main'}}
-{{!-- This extends the main layout template to include the content of this file --}}
-
-{{!-- Define the content for the body --}}
-{{#content 'body'}}
+<h1>Hi</h1>
 <div class="container text-center">
     {{#if user}}
         <h1>Welcome to your Lists!</h1>
-        
         <div id="list-card-container" class="row justify-content-center"></div>
             {{#each lists}}
             <div class="col-md-4">
@@ -28,10 +22,6 @@
         <div class="mt-4">
             <button id="add-list-btn" class="btn btn-dark justify-content-center" data-bs-toggle="modal" data-bs-target="#addListModal">Add New List</button>
         </div>
-    {{else}}
-        <h1>Please log in to view your lists</h1>
-        <a href="/login" class="btn btn-primary">Log In</a>
-        <a href="/signup" class="btn btn-secondary">Sign Up</a>
     {{/if}}
 </div>
 
@@ -72,5 +62,3 @@
     </div>
 </div>
 {{/if}}
-{{/content}}
-{{/extend}}

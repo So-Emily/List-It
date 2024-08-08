@@ -1,7 +1,4 @@
-{{!-- Extend the main layout --}}
-{{#extend 'main'}}
-{{!-- Define the content for the body --}}
-{{#content 'body'}}
+
 <div class="form-container">
     <form id="register-form" class="">
         <div class="row mb-3">
@@ -22,10 +19,10 @@
             <input type="password" class="form-control" id="inputPassword">
             </div>
         </div>
-        <button type="submit" class="btn btn-dark">Sign in</button>
-        <button type="button" class="btn btn-secondary">Sign Up</button>
+        <button type="submit" class="btn btn-secondary">Sign Up</button>
+          <button type="button"  onclick="location.href='/'" class="btn btn-dark">Sign in</button>
     </form>
 </div>
-{{/content}}
-{{/extend}}
+
+
 
