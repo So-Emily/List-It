@@ -21,7 +21,7 @@
 
       <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
         <div class='container'>
-          <a class='navbar-brand' href='/'>Just List It</a>
+          <a class='navbar-brand' href='/dashboard'>Just List It</a>
           {{#if logged_in}}
             <button id='logout' class='btn btn-dark'>Logout</button>
           {{/if}}
@@ -44,9 +44,9 @@
     ></script>
 
     {{#if logged_in}}
-     <script src="/js.logout.js"></script>
+     <script src="/js/logout.js"></script>
     {{/if}}
-    <script src='/js/lists.js'></script>
+    {{!-- <script src='/js/lists.js'></script> --}}
 
   </body>
 </html>

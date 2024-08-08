@@ -15,11 +15,13 @@ const userLogin = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/homepage');
     } else {
       alert('Failed to log in.');
     }
   }
+
+  console.log('hi');
 };
 
 document.querySelector('#login-form').addEventListener('submit', userLogin);
