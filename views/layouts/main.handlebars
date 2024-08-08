@@ -22,8 +22,8 @@
       <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
         <div class='container'>
           <a class='navbar-brand' href='/'>Just List It</a>
-       {{#if logged_in}}
-          <button id='logout' class='btn btn-dark'>Logout</button>
+          {{#if logged_in}}
+            <button id='logout' class='btn btn-dark'>Logout</button>
           {{/if}}
 
         </div>
@@ -42,9 +42,11 @@
       integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz'
       crossorigin='anonymous'
     ></script>
-    <script src='/js/lists.js'></script>
-    <script src='/js/register.js'></script>
 
+    {{#if logged_in}}
+     <script src="/js.logout.js"></script>
+    {{/if}}
+    <script src='/js/lists.js'></script>
 
   </body>
 </html>
