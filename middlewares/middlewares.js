@@ -1,5 +1,5 @@
 function checkAuthentication (req, res, next) {
-    if(!req.session.login) {
+    if(!req.session.logged_in) {
         return res.redirect('/')
     } else {
         return next()

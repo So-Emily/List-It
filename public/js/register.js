@@ -1,20 +1,26 @@
-document.querySelector('#register-form').addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const name = document.querySelector('input[name="name"]').value.trim();
-    const email = document.querySelector('input[name="email"]').value.trim();
-    const password = document.querySelector('input[name="password"]').value.trim();
+const registerUser = async (event) => {
+  event.preventDefault();
+  const name = document.querySelector('#inputName').value.trim();
+  const email = document.querySelector('#inputEmail').value.trim();
+  const password = document.querySelector('#inputPassword').value.trim();
 
-    if (name && email && password) {
-        const response = await fetch('api/users/register',{
-            method: 'POST',
-            body: JSON.stringify({ name, email, password}),
-            headers: { 'Content-Type': 'application/json' },
-        });
+  console.log(name, email, password);
 
-        if (response.ok) {
-            document.location.replace('/');
-        } else {
-        alert('Failed to register.');
-        }
+  if (name && email && password) {
+    const response = await fetch('api/users/register', {
+      method: 'POST',
+      body: JSON.stringify({ name, email, password }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      document.location.replace('/homepage');
+    } else {
+      alert('Failed to register.');
     }
-})
+  }
+};
+
+document
+  .querySelector('#register-form')
+  .addEventListener('submit', registerUser);
