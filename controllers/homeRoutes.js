@@ -13,7 +13,9 @@ router.get('/', async (req, res) => {
 // Handler for the homepage
 router.get('/homepage', checkAuthentication, async (req, res) => {
     try {
-        res.render('homepage', {logged_in:req.session.logged_in });
+        res.render('homepage', {
+            logged_in:req.session.logged_in
+        });
     } catch (err) {
         res.status(500).json(err);
     }

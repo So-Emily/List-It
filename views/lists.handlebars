@@ -1,9 +1,8 @@
-
 <div class="container">
     <h1>{{listTitle}}</h1>
     <div class="row">
         <div class="col-md-4">
-            <h2>To Do</h2>
+            <h2>Nerd Stuff to Try</h2>
             <div id="todo" class="list-group" ondrop="drop(event)" ondragover="allowDrop(event)">
                 {{#each todoItems}}
                 <div id="{{id}}" class="list-group-item" draggable="true" ondragstart="drag(event)">
@@ -13,7 +12,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <h2>In Process</h2>
+            <h2>In Process Nerd Stuff</h2>
             <div id="inprocess" class="list-group" ondrop="drop(event)" ondragover="allowDrop(event)">
                 {{#each inProcessItems}}
                 <div id="{{id}}" class="list-group-item" draggable="true" ondragstart="drag(event)">
@@ -23,7 +22,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <h2>Done</h2>
+            <h2>Finished Nerd Stuff</h2>
             <div id="done" class="list-group" ondrop="drop(event)" ondragover="allowDrop(event)">
                 {{#each doneItems}}
                 <div id="{{id}}" class="list-group-item" draggable="true" ondragstart="drag(event)">

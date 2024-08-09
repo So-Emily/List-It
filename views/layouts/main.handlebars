@@ -13,28 +13,30 @@
       integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH'
       crossorigin='anonymous'
     />
-    <link rel='stylesheet' href='/css/style.css' />
+
+    {{! Custom CSS }}
+    {{!-- For Main Page --}}
+    <link rel='stylesheet' href='/css/main.css' />
+
+
   </head>
   <body>
-
     <header>
+    <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+      <div class='container-fluid d-flex justify-content-between'>
+        {{#if logged_in}}
+          <a class='navbar-brand mx-auto' href='/homepage'>Just List It</a>
+          
+        {{else}}
+          <a class='navbar-brand mx-auto' href='/'>Just List It</a>
+        {{/if}}
 
-      <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
-        <div class='container'>
-          {{#if logged_in}}
-            <a class='navbar-brand' href='/homepage'>Just List It</a>
-          {{else}}
-            <a class='navbar-brand' href='/'>Just List It</a>
-          {{/if}}
-
-          {{#if logged_in}}
-            <button id='logout' class='btn btn-dark'>Logout</button>
-          {{/if}}
-
-        </div>
-      </nav>
-
-    </header>
+        {{#if logged_in}}
+          <button id='logout' class='btn btn-dark'>Logout</button>
+        {{/if}}
+      </div>
+    </nav>
+  </header>
 
     <main class='container container-fluid mt-5'>
       <!-- Render the sub layout -->
@@ -51,7 +53,6 @@
     {{#if logged_in}}
       <script src='/js/logout.js'></script>
     {{/if}}
-    {{! <script src='/js/lists.js'></script> }}
 
   </body>
 </html>
