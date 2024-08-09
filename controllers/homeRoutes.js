@@ -38,15 +38,15 @@ router.get('/view/list/:category', async (req, res) => {
         category:req.params.category
     } });
     const list = allLists.map((list) => list.get({ plain: true }));
-    res.render('lists', {list, logged_in: req.session.logged_in, category:req.session.category  });
+    res.render('lists', {list, logged_in: req.session.logged_in, category:req.session.category});
   } catch (error) {
     console.error('An error occurred:', error);
   }
 });
 
-router.get('/new/list', async (req, res) => {
+router.get('/create', async (req, res) => {
     try {
-      res.render('create-list', {logged_in: req.session.logged_in, category:req.session.category  });
+      res.render('add-list', {logged_in: req.session.logged_in, category:req.session.category});
     } catch (error) {
       console.error('An error occurred:', error);
     }
