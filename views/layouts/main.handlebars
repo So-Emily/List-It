@@ -25,10 +25,11 @@
     <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
       <div class='container-fluid d-flex justify-content-between'>
         {{#if logged_in}}
-          <a class='navbar-brand mx-auto' href='/homepage'>Just List It</a>
+        {{!-- add mx-auto to center --}}
+          <a class='navbar-brand' href='/homepage'>Just List It</a>
           
         {{else}}
-          <a class='navbar-brand mx-auto' href='/'>Just List It</a>
+          <a class='navbar-brand mx-auto' href='/'></a>
         {{/if}}
 
         {{#if logged_in}}

@@ -1,5 +1,13 @@
 <link rel='stylesheet' href='/css/login.css' />
 
+<div class="video-container">
+    <video autoplay muted loop id="bg-video">
+        <source src="/assets/mp4/cloudy-portal.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<h1 class="login-title text-center">The Portal To Your Lists</h1>
 <form id="login-form">
     <div class="mb-3 form-group">
         <label for="inputEmail" class="form-label">Email</label>
@@ -14,8 +22,8 @@
         </div>
     </div>
     <div class="d-grid gap-2 col-4 mx-auto">
-        <button class="btn btn-dark my-5 btn-lg" type="submit">Login</button>
-        <a class="mx-auto my-1" href="/register">Create an account</a>
+        <button class="login-btn btn btn-dark my-5 btn-lg" type="submit">Login</button>
+        <a class="bottom-log-btn mx-auto my-1" href="/register">Create an account</a>
     </div>
 </form>
 

@@ -1,5 +1,13 @@
 <link rel='stylesheet' href='/css/login.css' />
 
+<div class="video-container">
+    <video autoplay muted loop id="bg-video">
+        <source src="/assets/mp4/cloudy-portal.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<h1 class="login-title text-center">Sign Up and Create Your Own Nerdy Lists!</h1>
 <div class="form-container">
     <form id="register-form">
         <div class="mb-3 form-group">
@@ -21,7 +29,11 @@
             </div>
         </div>
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-dark">Sign Up</button>
+            <button type="submit" class="sign-up-btn btn btn-dark">Sign Up</button>
+        </div>
+        <div class="d-flex justify-content-center">
+            <br>
+            <a class="bottom-log-btn mx-auto my-1" href="/">Back to Login</a>  
         </div>
     </form>
 </div>
