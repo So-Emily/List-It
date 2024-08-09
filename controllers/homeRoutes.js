@@ -30,18 +30,27 @@ router.get('/register', async (req, res) => {
   }
 });
 
-router.get('view/list/:category', async (req, res) => {
+router.get('/view/list/:category', async (req, res) => {
   try {
 
     req.session.category = req.params.category;
-    const allLists = await List.getAll({ where: {
-        categorys:req.params.category
+    const allLists = await List.findAll({ where: {
+        category:req.params.category
     } });
     const list = allLists.map((list) => list.get({ plain: true }));
-    res.render('lists', {list, logged_in: req.session.logged_in  });
+    res.render('lists', {list, logged_in: req.session.logged_in, category:req.session.category  });
   } catch (error) {
     console.error('An error occurred:', error);
   }
 });
+
+router.get('/new/list', async (req, res) => {
+    try {
+      res.render('create-list', {logged_in: req.session.logged_in, category:req.session.category  });
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
+  });
+  
 
 module.exports = router;

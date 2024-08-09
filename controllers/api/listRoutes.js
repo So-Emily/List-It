@@ -2,11 +2,12 @@ const router = require('express').Router();
 const { List } = require('../../models'); // Ensure List model is imported
 
 // POST a new list
-router.post('/create', async (req, res) => {
+router.post('/create/', async (req, res) => {
     try {
         const newList = await List.create({
             ...req.body,
             user_id: req.session.user_id,
+            category:req.session.category
         });
         res.status(200).json(newList);
     } catch (err) {
