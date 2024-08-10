@@ -1,0 +1,146 @@
+/* Starter Code */
+body {
+font-family: 'Open Sans', sans-serif;
+font-size: 16px;
+background: #cececeeb;
+}
+
+.navbar {
+    background-color: #42315ce9 !important;
+}
+
+.list-title {
+    color: smokeywhite;
+    text-shadow: 2px 2px 2px black;
+}
+
+.swim-lanes {
+min-height: 60vh;
+}
+
+.item-card {
+margin: 0 auto;
+}
+
+.item-card:hover {
+cursor: grab;
+}
+
+.item-card:active {
+cursor: grabbing;
+}
+
+
+/* Styling Main Title and Description underneath */
+#title, #description {
+color: #f8f4f4;
+}
+
+#title {
+text-decoration: underline;
+text-underline-offset: 2px;
+font-size: 3.2rem;
+}
+
+#description {
+/* padding-top: 20px; */
+font-size: 1.1rem;
+}
+
+/* Styling the Main Add item Button */
+.main-t-button {
+background: #42315ce9 ;
+color: #f1f0f0;
+border-color: white;
+margin-top: 5px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.main-t-button:hover {
+background: #1a1324e9 ;
+color: white;
+border-color: white;
+}
+
+/* Styling the Add item Modal */
+.add-t-button {
+background: #42315ce9 ;
+color: #f1f0f0;
+border-color: white;
+}
+
+.add-t-button:hover {
+background: #42315ce9 ;
+border-color: white;
+}
+
+/* Styling the three item lanes */
+/* LANES NOT CARDS */
+.card-title {
+/* background: #42315ce9 ; */
+color: #f1f0f0;
+padding: 10px;
+margin: 0;
+font-size: 1.8rem;
+}
+
+.card-header {
+background: #42315ce9 ;
+}
+
+/* Styling the item cards */
+/* item Card Background Styling */
+.card-title-sml {
+font-size: 1.5rem;
+color: white;
+}
+
+.card-body {
+background: #bfbebe;
+padding: 10px;
+}
+
+.card-text {
+font-size: larger;
+}
+
+.card-text-due {
+font-size: medium;
+margin-bottom: 2px;
+}
+
+/* Styling the item cards depending on the due date */
+.past-due {
+background-color: red;
+padding: 5px;
+}
+
+.due-today {
+background-color: rgb(227, 146, 16);
+padding: 5px;
+}
+
+
+.future {
+background-color: #42315ce9 ;
+padding: 5px;
+
+}
+
+/* Customizes the whole scrollbar */
+::-webkit-scrollbar {
+width: 12px; /* Adjust the width of the scrollbar */
+}
+
+/* Customizes the track of the scrollbar */
+::-webkit-scrollbar-track {
+background: #2c2f33; /* Change to match your design */
+}
+
+/* Customizes the thumb of the scrollbar */
+::-webkit-scrollbar-thumb {
+background-color: #333233; 
+/* border-radius: 6px;  */
+border: 3px solid #2c2f33; /* Same as track color to create a "margin" effect */
+}

@@ -20,7 +20,7 @@ List.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    decription: {
+    description: {
         type: DataTypes.STRING,
         allowNull: false,
       },
