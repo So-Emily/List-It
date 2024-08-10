@@ -1,13 +1,15 @@
-async function fetchLists() {
+async function fetchListById(listId) {
     try {
-        const response = await fetch('/api/lists');
+        const response = await fetch(`/api/lists/${listId}`);
+        if (!response.ok) {
+            throw new Error('No list found with this id');
+        }
         const data = await response.json();
-        const lists = document.querySelector('.list');
-        // render the lists here?
-        lists.innerHTML = data.map(list => `<li>${list.name}</li>`).join('');
-        return data;
+        // Render the list data on the page
+        renderList(data);
     } catch (error) {
         console.error(error);
+        // Handle the error, e.g., display a message to the user
     }
 }
 
@@ -31,6 +33,28 @@ function drop(ev) {
     const listId = ev.target.id;
     const itemId = element.id;
     updateListItem(listId, itemId);
+}
+
+async function fetchLists() {
+    try {
+        const response = await fetch('/api/lists');
+        if (!response.ok) {
+            throw new Error('Failed to fetch lists');
+        }
+        const data = await response.json();
+        // Render the lists on the page
+        renderLists(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+async function renderLists(lists) {
+    // Render the lists on the page
+}
+
+async function renderList(list) {
+    // Render the list on the page
 }
 
 async function updateListItem(listId, itemId) {
