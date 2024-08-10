@@ -1,4 +1,4 @@
-/* CSS for mp4 video */
+/* CSS for mp4 video
 .video-container {
     position: fixed;
     top: 0;
@@ -20,30 +20,38 @@
     z-index: -1;
     transform: translate(-50%, -50%);
     background-size: cover;
-}
+} */
 
 body {
     /* for mp4 background */
-    position: relative;
-    z-index: 1;
+    /* position: relative;
+    z-index: 1; */
 
     /* Disable scrolling */
     overflow: hidden;
 
     background-color: rgb(42, 122, 102);
+    background-image: url('/assets/images/purple-library.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
 }
 
+/* Homepage Title */
 h1 {
     margin-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 8px;
     color: whitesmoke;
     text-shadow: 2px 2px 2px black;
     text-decoration: underline;
     text-underline-offset: 7px;
     background: fixed;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #42315cab;
     border-radius: 10px;
     font-size: 2.5rem;
 }
@@ -55,8 +63,8 @@ h1 {
     flex-wrap: wrap;
     justify-content: center; /* Center items along the main axis */
     align-items: center; /* Center items along the cross axis */
-    border-radius: 20px;
 }
+
 
 .card-container {
     display: flex;
@@ -70,7 +78,6 @@ h1 {
 }
 
 .card {
-    position: relative;
     width: 375px !important;
     height: 450px;
     display: block;
@@ -78,9 +85,15 @@ h1 {
     transition: transform 0.3s ease-in-out;     
     flex: 1 0 375px;
     margin: 10px;
-    border-radius: 20px;
-
+    border-radius: 5px;
+    border: 4px solid #43325d !important; /* Ensure the border is visible */
+    overflow: hidden; /* Prevent background image from affecting the border */
 }
+
+/* .card .card-body {
+    position: relative;
+    z-index: 1;
+} */
 
 .card-link {
     text-decoration: none;
@@ -116,7 +129,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 130%;
+    height: 100%;
     color: white;
     background-color: transparent;
 }

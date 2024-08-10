@@ -1,4 +1,12 @@
-navbar-brand {
-    margin-left: 100px;
+.navbar {
+    background-color: #42315ce9 !important;
+    padding: 5px 0;
+    margin: 0;
+    border-bottom: 1px solid #d1bbf5c8;
 }
 
+.navbar-brand {
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px black;
+    
+}
