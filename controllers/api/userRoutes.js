@@ -15,7 +15,6 @@ router.post('/register', async (req, res) => {
     createUser = createUser.get({ plain: true });
     req.session.save(() => {
       const userInfo = _.omit(createUser, ['password']);
-      console.log(userInfo);
       req.session.user_id = userInfo.id;
       req.session.logged_in = true;
       res.status(200).json(userInfo);
@@ -41,7 +40,6 @@ router.post('/login', async (req, res) => {
       const userInfo = userLogin.get({ plain: true });
       const userInfoData = _.omit(userInfo, ['password']);
       req.session.user_id = userInfo.id;
-      console.log(userInfoData);
       req.session.logged_in = true;
       res.status(200).json(userInfoData);
     });
