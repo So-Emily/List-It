@@ -55,7 +55,8 @@ body {
 
 .bottom-log-btn:hover {
     color: rgb(0, 0, 0);
-    text-shadow: none;
+    text-shadow: 2px 2px 2px rgb(106, 106, 106);
+    /* text-shadow: none; */
 }
 
 .login-title {
@@ -64,6 +65,15 @@ body {
     text-underline-offset: 7px;
     color: whitesmoke;
     text-shadow: 2px 2px 2px black;
+}
+
+.login-btn{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #42315ce9 !important;
 }
 
 /* Register Page */

@@ -1,3 +1,18 @@
+async function fetchLists() {
+    try {
+        const response = await fetch('/api/lists');
+        const data = await response.json();
+        const lists = document.querySelector('.list');
+        // render the lists here?
+        lists.innerHTML = data.map(list => `<li>${list.name}</li>`).join('');
+        return data;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', fetchLists);
+
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -20,7 +35,7 @@ function drop(ev) {
 
 async function updateListItem(listId, itemId) {
     try {
-        const response = await fetch(`/api/lists/update/${itemId}`, {
+        const response = await fetch(`/list/update/${itemId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
