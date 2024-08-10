@@ -30,7 +30,7 @@ router.get('/register', async (req, res) => {
   }
 });
 
-router.get('/view/list/:category', async (req, res) => {
+router.get('/view/list/:category',checkAuthentication, async (req, res) => {
   try {
 
     req.session.category = req.params.category;
@@ -38,17 +38,17 @@ router.get('/view/list/:category', async (req, res) => {
         category:req.params.category
     } });
     const list = allLists.map((list) => list.get({ plain: true }));
-    res.render('lists', {list, logged_in: req.session.logged_in, category:req.session.category});
+    res.render('lists', {list, logged_in: req.session.logged_in,});
   } catch (error) {
-    console.error('An error occurred:', error);
+    res.status(500).json(err);
   }
 });
 
-router.get('/create', async (req, res) => {
+router.get('/create', checkAuthentication, async (req, res) => {
     try {
       res.render('add-list', {logged_in: req.session.logged_in, category:req.session.category});
     } catch (error) {
-      console.error('An error occurred:', error);
+      res.status(500).json(err);
     }
   });
   

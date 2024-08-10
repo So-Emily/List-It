@@ -11,7 +11,6 @@ router.post('/add', async (req, res) => {
         ...req.body,
         category:req.session.category,
         user_id: req.session.user_id,
-      
     });
     res.status(200).json(result);
 
