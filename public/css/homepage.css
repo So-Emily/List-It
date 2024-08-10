@@ -30,7 +30,7 @@ body {
     /* Disable scrolling */
     overflow: hidden;
 
-    background-color: rgb(42, 122, 102);
+    background-color: rgb(136, 136, 136);
     background-image: url('/assets/images/purple-library.jpg');
     background-size: cover;
     background-position: center;

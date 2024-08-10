@@ -14,30 +14,28 @@ router.get('/', async (req, res) => {
 });
 
 // Get a specific list by ID
-router.get('/:id', async (req, res) => { // Update this line
+router.get('/:id', async (req, res) => {
     try {
-        console.log(`Fetching list with ID: ${req.params.id}`);
-        const listData = await List.findByPk(req.params.id);
-        if (!listData) {
-            console.log(`No list found with ID: ${req.params.id}`);
-            res.status(404).json({ message: 'No list found with this id!' });
+        const list = await List.findByPk(req.params.id);
+        if (!list) {
+            res.status(404).render('error', { message: 'No list found with this id' });
             return;
         }
-        const list = listData.get({ plain: true });
-        res.render('list', { list });
-    } catch (err) {
-        console.error(`Error fetching list with ID: ${req.params.id}`, err);
-        res.status(500).json(err);
+        res.render('list', {
+            list,
+            todoItems: list.todoItems,
+            inProcessItems: list.inProcessItems,
+            doneItems: list.doneItems
+        });
+    } catch (error) {
+        res.status(500).render('error', { message: 'Internal Server Error' });
     }
 });
 
 // POST a new list
 router.post('/create', async (req, res) => {
     try {
-        const newList = await List.create({
-            ...req.body,
-            user_id: req.session.user_id,
-        });
+        const newList = await List.create(req.body);
         res.status(201).json(newList);
     } catch (err) {
         res.status(500).json(err);

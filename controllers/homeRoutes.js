@@ -3,9 +3,13 @@ const checkAuthentication = require('../middlewares/middlewares');
 const { List } = require('../models');
 
 router.get('/', async (req, res) => {
-    
     try {
-        res.render('login', {logged_in:req.session.logged_in})
+        if (req.session.logged_in) {
+            res.redirect('/homepage');
+            return;
+        }
+        res.render('login', { logged_in: req.session.logged_in });
+        
     } catch (err) {
         res.status(500).json(err);
     }
@@ -15,7 +19,7 @@ router.get('/', async (req, res) => {
 router.get('/homepage', checkAuthentication, async (req, res) => {
     try {
         res.render('homepage', {
-            logged_in:req.session.logged_in
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
@@ -25,7 +29,7 @@ router.get('/homepage', checkAuthentication, async (req, res) => {
 // Handler for the register
 router.get('/register', async (req, res) => {
     try {
-        res.render('register', {logged_in:req.session.logged_in});
+        res.render('register', { logged_in: req.session.logged_in });
     } catch (err) {
         res.status(500).json(err);
     }
@@ -41,7 +45,7 @@ router.get('/lists/:id', async (req, res) => {
         }
         const list = listData.get({ plain: true });
         res.render('lists', { list });
-        } catch (err) {
+    } catch (err) {
         res.status(500).json(err);
     }
 });
