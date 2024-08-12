@@ -1,0 +1,28 @@
+{{!-- This is the form that creates a comment for a particular post --}}
+<div class="card my-5">
+  <div class="card-header p-3">
+  <h2>Create a new List</h2>
+  </div>
+  <div class="card-body">
+  <div class="row justify-content-center">
+  <div class="col-md-6">
+  <form class="form new-list-form">
+      <div class="form-group">
+        <label for="list-title">Title:</label>
+        <input class="form-input" type="text" id="list-title" name="list-title" />
+      </div>
+      <div class="form-group">
+        <label for="list-desc">Description:</label>
+        <textarea class="form-input" id="list-desc" name="list-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Post</button>
+      </div>
+    </form>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+    <script src='/js/create-list.js'></script>
