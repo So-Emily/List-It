@@ -1,7 +1,7 @@
+// controllers/api/listRoutes.js
+
 const router = require('express').Router();
-const { List } = require('../../models'); // Ensure List model is imported
-
-
+const { List } = require('../../models');
 
 // POST a new list
 router.post('/add', async (req, res) => {
@@ -19,7 +19,7 @@ router.post('/add', async (req, res) => {
   }
 });
 
-// PUT to update a list
+// PUT to update a list item
 router.put('/update/:id', async (req, res) => {
   try {
     const updatedList = await List.update(req.body, {

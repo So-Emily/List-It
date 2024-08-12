@@ -1,9 +1,14 @@
-const router = require('express').Router();
+// controllers/index.js
 
+const router = require('express').Router();
+const listRoutes = require('./api/listRoutes');
+const userRoutes = require('./api/userRoutes');
+const homeRoutes = require('./homeRoutes');
 const apiRoutes = require('./api');
-const homeRoutes = require('./homeRoutes'); // Corrected import path
 
 router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
+router.use('/list', listRoutes); 
+router.use('/api/users', userRoutes);
 
 module.exports = router;

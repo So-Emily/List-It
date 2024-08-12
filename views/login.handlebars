@@ -1,24 +1,30 @@
-{{!-- Extend the main layout --}}
-{{!-- Define the content for the body --}}
+<link rel='stylesheet' href='/css/login.css' />
 
+<div class="video-container">
+    <video autoplay muted loop id="bg-video">
+        <source src="/assets/mp4/cloudy-portal.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<h1 class="login-title text-center">The Portal To Your Lists</h1>
 <form id="login-form">
-    <div class="row mb-3">
-        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-        <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail">
+    <div class="mb-3 form-group">
+        <label for="inputEmail" class="form-label">Email</label>
+        <div class="col-md-6 mx-auto">
+            <input type="email" class="form-control" id="inputEmail">
         </div>
     </div>
-    <div class="row mb-3">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-        <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword">
+    <div class="mb-3 form-group">
+        <label for="inputPassword" class="form-label">Password</label>
+        <div class="col-md-6 mx-auto">
+            <input type="password" class="form-control" id="inputPassword">
         </div>
     </div>
-     <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-primary my-5 btn-lg"  type="submit">Login</button>
-        <a class= "mx-auto my-1" href="/register">Create an account</a>
-        </div>
+    <div class="d-grid gap-2 col-4 mx-auto">
+        <button class="login-btn btn btn-dark my-5 btn-lg" type="submit">Login</button>
+        <a class="bottom-log-btn mx-auto my-1" href="/register">Create an account</a>
+    </div>
 </form>
 
-
-    <script src='/js/login.js'></script>
+<script src='/js/login.js'></script>
