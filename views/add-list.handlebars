@@ -1,28 +1,45 @@
-{{!-- This is the form that creates a comment for a particular post --}}
-<div class="card my-5">
-  <div class="card-header p-3">
-  <h2>Create a new List</h2>
+<div class='card my-5 text-center'>
+  <div class='card-header p-3'>
+    <h2>Add to Your List!</h2>
   </div>
-  <div class="card-body">
-  <div class="row justify-content-center">
-  <div class="col-md-6">
-  <form class="form new-list-form">
-      <div class="form-group">
-        <label for="list-title">Title:</label>
-        <input class="form-input" type="text" id="list-title" name="list-title" />
+  <div class='card-body'>
+    <div class='row justify-content-center'>
+      <div class='col-md-8'>
+        {{! This form will take the input to create a new list item }}
+        <form class='form new-list-form text-center'>
+          <div class='form-group mb-4'>
+            <label
+              for='list-title'
+              style=' display: block; margin-bottom: 0.5rem;
+    font-weight: bold;'
+              {{! This is the input that will contain the title of the item }}
+            >Title:</label>
+            <input
+              class='form-input'
+              type='text'
+              id='list-title'
+              name='list-title'
+              style='width:300px; height:50px'
+            />
+          </div>
+          <div class='form-group mb-4'>
+            <label
+              for='list-desc'
+              style=' display: block; margin-bottom: 0.5rem;
+    font-weight: bold;'
+              {{! This is the input that will contain the description }}
+            >Description:</label>
+            <textarea
+              class='form-input'
+              id='list-desc'
+              name='list-desc'
+              style=' height: 100px; width:300px;resize: vertical;'
+            ></textarea>
+          </div>
+          <button class='btn btn-primary btn-outline-dark btn-light' type='submit'>Submit</button>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="list-desc">Description:</label>
-        <textarea class="form-input" id="list-desc" name="list-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Post</button>
-      </div>
-    </form>
-  </div>
-  </div>
+    </div>
   </div>
 </div>
-
-
-    <script src='/js/create-list.js'></script>
+<script src='/js/create-list.js'></script>
