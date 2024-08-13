@@ -138,7 +138,7 @@ background-color: #e9ecef;
 }
 
 .card-footer {
-background-color: #6784a1bd;
+background-color: #42315ce9;
 border-top: 1px solid #dee2e6;
 }
 
@@ -155,4 +155,10 @@ border-color: #bd2130;
 .add-btn {
     margin-top: 10px;
     margin-bottom: 5px;
+}
+
+.btn-back {
+    width: 5%;
+    margin-bottom: 5px;
+    margin-left:  5px;
 }

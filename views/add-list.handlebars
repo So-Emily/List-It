@@ -1,50 +1,65 @@
 <head>
-  <link rel='stylesheet' href='/css/add-list.css' />
+  <link rel='stylesheet' href='/css/lists.css' />
 </head>
 
-<div class='card my-5 text-center'>
-  <div class='card-header p-3'>
-    <h2>Add to Your List!</h2>
-  </div>
-    <div class='card-body'>
-      <div class='row justify-content-center'>
-        <div class='col-md-8'>
-          {{! This form will take the input to create a new list item }}
-          <form class='form new-list-form text-center'>
-            <div class='form-group mb-4'>
-              <label
-                for='list-title'
-                style=' display: block; margin-bottom: 0.5rem; font-weight: bold;'
-                {{! This is the input that will contain the title of the item }}
-              >Title:</label>
-              <input
-                class='form-input'
-                type='text'
-                id='list-title'
-                name='list-title'
-                style='width:300px; height:50px'
-              />
+{{!-- Main Title for list  --}}
+<div class='p-4 mb-4 text-center border-bottom border-5'>
+  {{!-- Displays the title including the name for the specific user that is logged in --}}
+  <h1 class='list-title display-3' id='title'>{{name}}'s
+    {{capitalize category}}
+    List</h1>
+  <button type='button' class='add-btn btn btn-dark' onclick="location.href='/create'">Add an Item</button>
+</div>
+
+{{!-- List Starter HTML --}}
+<div class='container'>
+  <h1>{{listTitle}}</h1>
+  <div class='row'>
+    <div class='col-md-4'>
+      <h2 class="text-center">To Do</h2>
+      <div id='todo' class='list-group' ondrop='drop(event)' ondragover='allowDrop(event)'>
+        {{#each list}}
+          <div id='{{id}}' class='list-group-item' draggable='true' ondragstart='drag(event)'>
+            <div class='card border-dark mb-3 text-center' style='width: 100%;'>
+              <div class='card-header'><h5 class='card-title'>{{title}}</h5></div>
+              <div class='card-body text-dark'>
+                <p class='card-text'>{{description}}</p>
+                <p class='card-text'><small class='text-muted'>Created on {{format_date date_created}}</small></p>
+              </div>
+              <div class='card-footer' style='height: 50px; max-height: none; overflow: auto;'>
+                <button type='button' class='btn btn-danger btn-sm' id='delete-item' data-id='{{id}}'>Delete</button>
+              </div>
             </div>
-            <div class='form-group mb-4'>
-              <label
-                for='list-desc'
-                style=' display: block; margin-bottom: 0.5rem; font-weight: bold;'
-                {{! This is the input that will contain the description }}
-              >Description:</label>
-              <textarea
-                class='form-input'
-                id='list-desc'
-                name='list-desc'
-                style=' height: 100px; width:300px;resize: vertical;'
-              ></textarea>
-            </div>
-            <button class='btn btn-primary btn-outline-dark btn-light' type='submit'>Submit</button>
-            
-          </form>
-            <a href='/homepage' class='btn-back'>Back to Home</a> 
-        </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    <div class='col-md-4'>
+      <h2 class="text-center">In Process</h2>
+      <div id='inprocess' class='list-group' ondrop='drop(event)' ondragover='allowDrop(event)'>
+        {{#each inProcessItems}}
+          <div id='{{id}}' class='list-group-item' draggable='true' ondragstart='drag(event)'>
+            {{title}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    <div class='col-md-4'>
+      <h2 class="text-center">Done</h2>
+      <div id='done' class='list-group' ondrop='drop(event)' ondragover='allowDrop(event)'>
+        {{#each doneItems}}
+          <div id='{{id}}' class='list-group-item' draggable='true' ondragstart='drag(event)'>
+            {{title}}
+          </div>
+        {{/each}}
       </div>
     </div>
   </div>
+</div>
 
-  <script src='/js/create-list.js'></script>
+<div class="btn-back"></div>
+  <button type='button' class='btn btn-back btn-dark fixed-bottom text-center' onclick="location.href='/homepage'"> ← Home</button>
+</div>
+
+<script src='/js/lists.js'></script>
+<script src='/js/remove-list.js'></script>
