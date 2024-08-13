@@ -22,7 +22,7 @@ const sess = {
   cookie: {
     maxAge: 600000,
     httpOnly: true,
-    secure: true,
+    secure: true, // set to true when deploying to render https
     sameSite: 'strict',
   },
   resave: false,
