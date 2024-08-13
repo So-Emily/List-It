@@ -31,7 +31,8 @@ Express session plays a key role in verifying and authenticating users by creati
 
 On the client side, a cookie holds that session id so that the user information is specialized for their account.
 
-![homepage-img](https://github.com/user-attachments/assets/d093d474-6c21-4936-a29a-dff6e2c1d648)
+![homepage-img](https://github.com/user-attachments/assets/2aeca62a-f0f3-4343-8f50-eecbad14c597)
+
 
 ![login-img](https://github.com/user-attachments/assets/7dda68a0-86ea-486b-b75a-9d1fe52e29b0)
 
