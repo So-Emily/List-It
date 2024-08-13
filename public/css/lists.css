@@ -5,154 +5,170 @@ body {
     background: darkgrey;
     }
     
-.navbar {
-background-color: #42315ce9 !important;
-}
-
-.list-title {
-color: smokeywhite;
-text-shadow: 2px 2px 2px black;
-}
-
-.swim-lanes {
-min-height: 60vh;
-}
-
-.item-card {
-margin: 0 auto;
-}
-
-.item-card:hover {
-cursor: grab;
-}
-
-.item-card:active {
-cursor: grabbing;
-}
-
-#title {
-text-decoration: underline;
-text-underline-offset: 7px;
-font-size: 3.2rem;
-}
-/* Styling Main Title and Description underneath */
-#title, #description {
-color: #f8f4f4;
-}
-
-#description {
-font-size: 1.1rem;
-}
-
-/* Styling the Main Add item Button */
-.main-t-button {
-background: #42315ce9;
-color: #f1f0f0;
-border-color: white;
-margin-top: 5px;
-padding-left: 20px;
-padding-right: 20px;
-}
-
-.main-t-button:hover {
-background: #1a1324e9;
-color: white;
-border-color: white;
-}
-
-/* Styling the Add item Modal */
-.add-t-button {
-background: #42315ce9;
-color: #f1f0f0;
-border-color: white;
-}
-
-.add-t-button:hover {
-background: #42315ce9;
-border-color: white;
-}
-
-/* Styling the three item lanes */
-.card-title {
-color: #f1f0f0;
-padding: 10px;
-margin: 0;
-font-size: 1.8rem;
-}
-
-.card-header {
-background: #42315ce9;
-}
-
-/* Styling the item cards */
-.card-title-sml {
-font-size: 1.5rem;
-color: white;
-}
-
-.card-body {
-background: #bfbebe;
-padding: 10px;
-}
-
-.card-text {
-font-size: larger;
-}
-
-.card-text-due {
-font-size: medium;
-margin-bottom: 2px;
-}
-
-/* Customizes the whole scrollbar */
-::-webkit-scrollbar {
-width: 12px; /* Adjust the width of the scrollbar */
-}
-
-/* Customizes the track of the scrollbar */
-::-webkit-scrollbar-track {
-background: #2c2f33; /* Change to match your design */
-}
-
-/* Customizes the thumb of the scrollbar */
-::-webkit-scrollbar-thumb {
-background-color: #333233;
-border: 3px solid #2c2f33; /* Same as track color to create a "margin" effect */
-}
-
-/* Specific Styles for Task List */
-.list-group {
-margin-bottom: 20px;
-}
-
-.list-group-item {
-background-color: #f8f9fa;
-border: 1px solid #dee2e6;
-margin-bottom: 10px;
-padding: 10px;
-border-radius: 5px;
-}
-
-.list-group-item:hover {
-background-color: #e9ecef;
-}
-
-.card-footer {
-background-color: #6784a1bd;
-border-top: 1px solid #dee2e6;
-}
-
-.btn-danger {
-background-color: #dc3545;
-border-color: #dc3545;
-}
-
-.btn-danger:hover {
-background-color: #c82333;
-border-color: #bd2130;
-}
-
-.add-btn {
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
+    .navbar {
+    background-color: #42315ce9 !important;
+    }
+    
+    .list-title {
+    color: smokeywhite;
+    text-shadow: 2px 2px 2px black;
+    }
+    
+    .swim-lanes {
+    min-height: 60vh;
+    }
+    
+    .item-card {
+    margin: 0 auto;
+    }
+    
+    .item-card:hover {
+    cursor: grab;
+    }
+    
+    .item-card:active {
+    cursor: grabbing;
+    }
+    
+    #title {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    font-size: 3.2rem;
+    }
+    /* Styling Main Title and Description underneath */
+    #title, #description {
+    color: #f8f4f4;
+    }
+    
+    #description {
+    font-size: 1.1rem;
+    }
+    
+    /* Styling the Main Add item Button */
+    .main-t-button {
+    background: #42315ce9;
+    color: #f1f0f0;
+    border-color: white;
+    margin-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+    
+    .main-t-button:hover {
+    background: #1a1324e9;
+    color: white;
+    border-color: white;
+    }
+    
+    /* Styling the Add item Modal */
+    .add-t-button {
+    background: #42315ce9;
+    color: #f1f0f0;
+    border-color: white;
+    }
+    
+    .add-t-button:hover {
+    background: #42315ce9;
+    border-color: white;
+    }
+    
+    /* Styling the three item lanes */
+    .card-title {
+    color: #f1f0f0;
+    padding: 10px;
+    margin: 0;
+    font-size: 1.8rem;
+    }
+    
+    .card-header {
+    background: #42315ce9;
+    }
+    
+    /* Styling the item cards */
+    .card-title-sml {
+    font-size: 1.5rem;
+    color: white;
+    }
+    
+    .card-body {
+    background: #bfbebe;
+    padding: 10px;
+    }
+    
+    .card-text {
+    font-size: larger;
+    }
+    
+    .card-text-due {
+    font-size: medium;
+    margin-bottom: 2px;
+    }
+    
+    /* Customizes the whole scrollbar */
+    ::-webkit-scrollbar {
+    width: 12px; /* Adjust the width of the scrollbar */
+    }
+    
+    /* Customizes the track of the scrollbar */
+    ::-webkit-scrollbar-track {
+    background: #2c2f33; /* Change to match your design */
+    }
+    
+    /* Customizes the thumb of the scrollbar */
+    ::-webkit-scrollbar-thumb {
+    background-color: #333233;
+    border: 3px solid #2c2f33; /* Same as track color to create a "margin" effect */
+    }
+    
+    /* Specific Styles for Task List */
+    /* .list-group {
+        background-color: #f8f9fa;
+    margin-bottom: 20px;
+    } */
+    
+    .list-group-item {
+    background-color: #f8f9fa00;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    }
+    
+    
+    .card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    }
+    
+    .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    }
+    
+    .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    }
+    
+    .add-btn {
+        margin-top: 12px;
+        background-color: #42315ce9;
+    }
+    
+    .btn-back {
+        width: 5%;
+        margin-bottom: 5px;
+        margin-left:  5px;
+    }
+    
+    /* Styling the list title box */
+    .list-title-box{
+        background-color: #42315ce9;
+        color: #f1f0f0;
+        padding: 10px;
+        padding-top: 20px;
+        margin: 0;
+        font-size: 1.8rem;
+        border-top-left-radius: 20px; /* Adjust the value as needed */
+        border-top-right-radius: 20px; /* Adjust the value as needed */
+    }
