@@ -29,16 +29,15 @@ body {
     .item-card:active {
     cursor: grabbing;
     }
-    
+
+    #title {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    font-size: 3.2rem;
+    }
     /* Styling Main Title and Description underneath */
     #title, #description {
     color: #f8f4f4;
-    }
-    
-    #title {
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    font-size: 3.2rem;
     }
     
     #description {
