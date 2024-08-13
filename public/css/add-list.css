@@ -1,0 +1,39 @@
+/* add-list.css */
+
+body {
+    background-color: #2e2e2e; /* Dark grey background */
+    color: #ffffff; /* White text for readability */
+}
+
+.card {
+background-color: #3e3e3e; /* Slightly lighter grey for the card */
+border: 1px solid #ffffff; /* White border for contrast */
+}
+
+.card-header {
+background-color: #4e4e4e; /* Even lighter grey for the header */
+color: #ffffff; /* White text */
+}
+
+.card-body {
+color: #ffffff; /* White text */
+}
+
+.form-input {
+background-color: #5e5e5e; /* Dark grey input background */
+color: #ffffff; /* White text */
+border: 1px solid #ffffff; /* White border */
+}
+
+.btn-back {
+color: white;
+text-decoration: none;
+}
+
+.btn-back:hover {
+color: #7e7e7e; /* Slightly lighter grey on hover */
+}
+
+.btn:hover {
+background-color: #7e7e7e; /* Slightly lighter grey on hover */
+}
