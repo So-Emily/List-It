@@ -21,7 +21,7 @@ Our world is constantly creating new content that it can be overwhelming keeping
 
 ## Dependencies
 
-use npm i
+run npm i
 
 ## Issues
 

@@ -15,12 +15,14 @@ const PORT = process.env.PORT || 3001;
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
 
+app.set('trust proxy', 1);
+
 const sess = {
   secret: process.env.SECRET,
   cookie: {
     maxAge: 600000,
     httpOnly: true,
-    secure: false,
+    secure: true,
     sameSite: 'strict',
   },
   resave: false,
