@@ -41,9 +41,12 @@ body {
 
 /* Homepage Title */
 h1 {
-    margin-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15px;
+    /* margin-bottom: 10px; */
+    padding-left: 600px;
+    padding-right: 600px;
     padding-bottom: 15px;
     padding-top: 8px;
     color: whitesmoke;
@@ -54,6 +57,7 @@ h1 {
     background-color: #42315cab;
     border-radius: 10px;
     font-size: 2.5rem;
+    text-wrap: nowrap;
 }
 
 .container {
@@ -73,16 +77,18 @@ h1 {
 }
 
 .indi-card {
-    padding: 25px;
+    flex: 1 0 30%; /* Adjust the basis percentage as needed */
+    margin: 10px;
+    box-sizing: border-box;
     
 }
 
 .card {
     width: 375px !important;
-    height: 450px;
+    height: 500px;
     display: block;
     box-shadow: none;
-    transition: transform 0.3s ease-in-out;     
+    transition: transform 0.3s ease-in-out, background-image .3s ease-in-out; /* Add transition for background image */    
     flex: 1 0 375px;
     margin: 10px;
     border-radius: 5px;
@@ -90,10 +96,6 @@ h1 {
     overflow: hidden; /* Prevent background image from affecting the border */
 }
 
-/* .card .card-body {
-    position: relative;
-    z-index: 1;
-} */
 
 .card-link {
     text-decoration: none;
@@ -148,4 +150,16 @@ h1 {
 
 .card img {
     margin-left: 20px;
+}
+
+@media screen and (max-width: 990px) {
+    .indi-card {
+        flex: 1 0 45%; /* Adjust the basis percentage as needed */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .indi-card {
+        flex: 1 0 100%; /* Full width on smaller screens */
+    }
 }

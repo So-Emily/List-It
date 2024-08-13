@@ -1,31 +1,25 @@
+<head>
 <link rel='stylesheet' href='/css/homepage.css' />
+</head>
 
-{{!-- <div class="video-container">
-    <video autoplay muted loop id="bg-video">
-        <source src="/assets/mp4/gradient-bkg.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div> --}}
-
-<h1 class="text-center justify-content-center">Welcome to Your Lists</h1>
+<h1 class="justify-content-center">Welcome to Your Lists</h1>
 
 <div class="container">
     <div class="row justify-content-center">
-        
-        <div class="col-4 indi-card">
-            <a href="/list/1" class="card-link">
-                <div class="card mx-auto" style="width: 18rem; background-image: url('/assets/images/sparrow.jpg'); background-size:cover; background-repeat: no-repeat;">
+        <div class="col-4 indi-card" data-images='["/assets/images/movies/terminate.jpg", "/assets/images/movies/sparrow.jpg", "/assets/images/movies/kikis.jpg", "/assets/images/movies/anna.jpg", "/assets/images/movies/marvel.jpg"]'>
+            <a href="/view/list/movie" class="card-link">
+                <div class="card mx-auto" style="width: 18rem; background-size:cover; background-repeat: no-repeat;">
                     <div class="card-body text-center">
                         <h5 class="card-title">Movies</h5>
                         <p class="card-text">Where is that popcorn?</p>
                     </div>
                 </div>
-            </a>
+            </a>        
         </div>
 
-        <div class="col-4 indi-card">
-            <a href="/list/2" class="card-link">
-                <div class="card mx-auto" style="width: 18rem; background-image: url('/assets/images/animes.jpg'); background-size:cover; background-repeat: no-repeat;">
+        <div class="col-4 indi-card" data-images='["/assets/images/shows/animes.jpg", "/assets/images/shows/kakashi.jpg", "/assets/images/shows/ham.jpg", "/assets/images/shows/d-ball.jpg", "/assets/images/shows/gon.jpg"]'>
+            <a href="/view/list/show" class="card-link">
+                <div class="card mx-auto" style="width: 18rem; background-size:cover; background-repeat: no-repeat;">
                     <div class="card-body text-center">
                         <h5 class="card-title">Shows & Anime</h5>
                         <p class="card-text">Time to get our binge on!</p>
@@ -34,9 +28,9 @@
             </a>
         </div>
 
-        <div class="col-4 indi-card" id="game">
-            <a href="/list/3" class="card-link">
-                <div class="card mx-auto" style="width: 18rem; background-image: url('/assets/images/pokemons.jpg'); background-size:cover; background-repeat: no-repeat;">
+        <div class="col-4 indi-card" data-images='["/assets/images/games/pokemons.jpg", "/assets/images/games/Left4Dead.jpg", "/assets/images/games/halo.jpg", "/assets/images/games/witcher.jpg", "/assets/images/games/bloodborne.jpg", "/assets/images/games/f4.jpg"]'>
+            <a href="/view/list/game" class="card-link">
+                <div class="card mx-auto" style="width: 18rem; background-size:cover; background-repeat: no-repeat;">
                     <div class="card-body text-center">
                         <h5 class="card-title">Video Games</h5>
                         <p class="card-text">Get comfy and ready to game!</p>
@@ -46,6 +40,8 @@
         </div>
     </div>
 </div>
+
+<script src="/js/homepage.js"></script>
 
 
 

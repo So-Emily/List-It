@@ -1,19 +1,15 @@
-// controllers/api/listRoutes.js
-
 const router = require('express').Router();
 const { List } = require('../../models');
 
 // POST a new list
 router.post('/add', async (req, res) => {
   try {
-    console.log(req.body, req.session.user_id, req.session.category);
     const result = await List.create({
-        ...req.body,
-        category:req.session.category,
-        user_id: req.session.user_id,
+      ...req.body,
+      category: req.session.category,
+      user_id: req.session.user_id,
     });
     res.status(200).json(result);
-
   } catch (err) {
     res.status(400).json(err);
   }
