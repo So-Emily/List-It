@@ -12,7 +12,6 @@
 - [Dependencies](#dependencies)
 - [Issues](#issues)
 - [Collaborators](#collaborators)
-- [Credit](#credit)
 - [License](#license)
 
 ## Description
@@ -31,6 +30,10 @@ Once the data from the backend is ready, the application sends the data to be re
 Express session plays a key role in verifying and authenticating users by creating a session that stores sensitive data ,like user id, on the server side.  
 
 On the client side, a cookie holds that session id so that the user information is specialized for their account.
+
+![homepage-img](https://github.com/user-attachments/assets/d093d474-6c21-4936-a29a-dff6e2c1d648)
+
+![login-img](https://github.com/user-attachments/assets/7dda68a0-86ea-486b-b75a-9d1fe52e29b0)
 
 ## Deployment
 
