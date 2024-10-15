@@ -10,16 +10,17 @@
 - [Description](#description)
 - [Deployment](#deployment)
 - [Dependencies](#dependencies)
+- [Technologies](#technologies)
 - [Issues](#issues)
 - [Collaborators](#collaborators)
 - [License](#license)
 
 ## Description
-Our world is constantly creating new content and it can be overwhelming to keep track of all the latest releases, before long there might be something you wanted to see but completely forgot about. This full-stack application allows users to create their account so that they can keep track of all their nerdy hobbies.  
+Our world is constantly creating new content that it can be overwhelming keeping track of all the latest releases, before long there might be something you wanted to see but completely forgot about it. This full stack application allows users to create an their own personal account so that they can keep track of all their nerdy hobbies.  
 
-The purpose of this project was to create an application using the Model-View-Controller(MVC) concept that seamlessly connects the front and back end intuitively.  
+The purpose of this project was to create an application using the Model-View-Controller(MVC) concept that seamlessly connects the front and backend intuitively.  
 
-The backend consisted of two main packages, Express creates the server, and routes, accompanied by Sequelize which creates the connection to the database. 
+The backend consisted of two main packages, Express to create the server and routes, accompanied by Sequelize that creates the connection to the database. 
 
 Sequelize plays the role of the Model in the MVC paradigm which creates objects in javascript that act as tables and columns in a database. 
 
@@ -27,11 +28,11 @@ Using the models, routes will be requested by the user to perform various CRUD m
 
 Once the data from the backend is ready, the application sends the data to be rendered to the user (View) using Handlebars files.
 
-Express session plays a key role in verifying and authenticating users by creating a session that stores sensitive data, like user ID, on the server side.  
+Express session plays a key role in verifying and authenticating users by creating a session that stores sensitive data ,like user id, on the server side.  
 
-On the client side, a cookie holds that session ID so that the user information is specialized for their account.
+On the client side, a cookie holds that session id so that the user information is specialized for their account.
 
-![homepage-img](https://github.com/user-attachments/assets/4427b15f-29bb-4656-a112-93cc8fbbf52d)
+![homepage-img](https://github.com/user-attachments/assets/d093d474-6c21-4936-a29a-dff6e2c1d648)
 
 ![login-img](https://github.com/user-attachments/assets/7dda68a0-86ea-486b-b75a-9d1fe52e29b0)
 
@@ -42,8 +43,20 @@ This application is deployed on render, under the link:
 https://list-it-kw5e.onrender.com/
 
 ## Dependencies
+```
+npm install
+```
 
-run npm i
+## Technologies
+- Node.js
+- Express.js
+- Handlebars.js
+- PostgreSQL
+- Sequelize
+- express-session
+- dotenv
+- bcrypt
+- lodash
 
 ## Issues
 
